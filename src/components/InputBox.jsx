@@ -19,7 +19,7 @@ function InputBox({
           type="number"
           className="outline-none w-full bg-transparent py-1.5"
           placeholder="Amount"
-          disabled={disabled}
+          disabled={amountDisabled}
           value={amount}
           onChange={(e) => {
             onAmountChange && onAmountChange(Number(e.target.value));
