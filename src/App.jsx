@@ -2,7 +2,6 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import InputBox from "./components/InputBox";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,7 +15,6 @@ function App() {
       }}
     >
       <h1 className="bg-red-200">Test for tailwind</h1>
-      <InputBox />
     </div>
   );
 }
