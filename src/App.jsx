@@ -11,6 +11,7 @@ function App() {
   const [convertedAmount, setConvertedAmount] = useState(0);
 
   const currencyInfo = useCurrencyInfo(from);
+  const options = objects.keys(currencyInfo)
   return (
     <div
       className="w-full h-screen flex flex-wrap 
