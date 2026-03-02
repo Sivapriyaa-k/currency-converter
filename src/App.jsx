@@ -44,6 +44,8 @@ function App() {
                 label="from"
                 amount={amount}
                 currencyOptions={options}
+                onCurrencyChange={(currency) => setFrom(currency)}
+                onAmountChange={(amount) => setAmount(amount)}
               />
             </div>
           </form>
