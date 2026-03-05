@@ -31,14 +31,6 @@ function App() {
         backgroundImage: `url(https://images.pexels.com/photos/4968651/pexels-photo-4968651.jpeg)`,
       }}
     >
-      <div className="relative w-full h-0.5">
-        <button
-          onClick={swap}
-          className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-500 text-white px-2 py-0.5"
-        >
-          Swap
-        </button>
-      </div>
       <div className="w-full">
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
           <form
@@ -58,6 +50,14 @@ function App() {
             </div>
           </form>
         </div>
+        <div className="relative w-full h-0.5">
+          <button
+            onClick={swap}
+            className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-500 text-white px-2 py-0.5"
+          >
+            Swap
+          </button>
+        </div>
         <div className="w-full max-w-md mx-auto my-10 border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
           <form
             onSubmit={(e) => {
@@ -68,7 +68,8 @@ function App() {
             <div className="w-full mb-1">
               <InputBox
                 label="to"
-                amount={amount}
+                amount={convertedAmount}
+                amountDisabled={true}
                 currencyOptions={options}
                 onCurrencyChange={(currency) => setTo(currency)}
                 onAmountChange={(amount) => setAmount(amount)}
