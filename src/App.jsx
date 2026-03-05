@@ -50,7 +50,7 @@ function App() {
             </div>
           </form>
         </div>
-        <div className="relative w-full h-0.5">
+        <div className="relative w-full h-0.5 z-20">
           <button
             onClick={swap}
             className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-500 text-white px-2 py-0.5"
@@ -58,7 +58,7 @@ function App() {
             Swap
           </button>
         </div>
-        <div className="w-full max-w-md mx-auto my-10 border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+        <div className="w-full max-w-md mx-auto my-1.9 border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -68,14 +68,21 @@ function App() {
             <div className="w-full mb-1">
               <InputBox
                 label="to"
-                amount={convertedAmount}
-                amountDisabled={true}
                 currencyOptions={options}
+                amount={convertedAmount}
                 onCurrencyChange={(currency) => setTo(currency)}
-                onAmountChange={(amount) => setAmount(amount)}
+                selectedCurrency={to}
+                amountDisabled
               />
             </div>
           </form>
+          <button
+            class="w-100 text-white bg-blue-700 p-2 my-2 cursor-pointer"
+            type="submit"
+            onClick={convert}
+          >
+            Convert
+          </button>
         </div>
       </div>
     </div>
