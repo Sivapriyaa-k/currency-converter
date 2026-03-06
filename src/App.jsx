@@ -49,16 +49,14 @@ function App() {
               />
             </div>
           </form>
-        </div>
-        <div className="relative w-full h-0.5 z-20">
-          <button
-            onClick={swap}
-            className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-500 text-white px-2 py-0.5"
-          >
-            Swap
-          </button>
-        </div>
-        <div className="w-full max-w-md mx-auto my-1.9 border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+          <div className="relative w-full h-0.5 z-20">
+            <button
+              onClick={swap}
+              className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-500 text-white px-2 py-0.5"
+            >
+              Swap
+            </button>
+          </div>
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -81,7 +79,7 @@ function App() {
             type="submit"
             onClick={convert}
           >
-            Convert
+            Convert {from.toUpperCase} to {to.toUpperCase}
           </button>
         </div>
       </div>
