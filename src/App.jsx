@@ -79,7 +79,7 @@ function App() {
             type="submit"
             onClick={convert}
           >
-            Convert {from.toUpperCase} to {to.toUpperCase}
+            Convert {from.toUpperCase()} to {to.toUpperCase()}
           </button>
         </div>
       </div>
